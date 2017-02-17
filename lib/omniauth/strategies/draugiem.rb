@@ -62,8 +62,8 @@ module OmniAuth
       end
 
       info do
-        if @auth_data['users'] && @auth_data['users'][@auth_data['uid']]
-          user = @auth_data['users'][@auth_data['uid']]
+        if @auth_data['users'] && @auth_data['users'][@auth_data['uid'].to_s]
+          user = @auth_data['users'][@auth_data['uid'].to_s]
           {
             'name' => "#{user['name']} #{user['surname']}",
             'nickname' => user['nick'],
